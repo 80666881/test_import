@@ -1,5 +1,6 @@
-import  {count} from './counter'
-// let count = require ('./counter')
+import  {count} from './counter2'
+// let {count} = require('./counter2')
+
 console.log('第一次执行count，获取原始值',count);
 
 setTimeout(function () {

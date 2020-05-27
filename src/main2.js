@@ -81,30 +81,32 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index2.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/counter.js":
-/*!************************!*\
-  !*** ./src/counter.js ***!
-  \************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./src/counter2.js":
+/*!*************************!*\
+  !*** ./src/counter2.js ***!
+  \*************************/
+/*! exports provided: count */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("exports.count = 0\nsetTimeout(function () {\n  console.log('increase count to', ++exports.count, 'in counter.js after 500ms')\n}, 500)\n\n\n//# sourceURL=webpack:///./src/counter.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"count\", function() { return count; });\n var count = 0\n \nsetTimeout(function () {\n  console.log('increase count to', ++count, 'in counter.js after 500ms')\n}, 500)\n\n\n//# sourceURL=webpack:///./src/counter2.js?");
 
 /***/ }),
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./src/index2.js":
+/*!***********************!*\
+  !*** ./src/index2.js ***!
+  \***********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("const {count} = __webpack_require__(\"./src/counter.js\")\nsetTimeout(function () {\n  console.log('read count after 1000ms in commonjs is', count)\n}, 1000)\n\n\n//# sourceURL=webpack:///./src/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _counter2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./counter2 */ \"./src/counter2.js\");\n\nconsole.log('第一次执行count，获取原始值',_counter2__WEBPACK_IMPORTED_MODULE_0__[\"count\"]);\n\nsetTimeout(function () {\n  console.log('read count after 1000ms is', _counter2__WEBPACK_IMPORTED_MODULE_0__[\"count\"])\n}, 1000)\n\n\n//# sourceURL=webpack:///./src/index2.js?");
 
 /***/ })
 
